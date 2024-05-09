@@ -17,7 +17,7 @@
 
 <body>
 
-    fwef
+    @dd($movies)
 
 </body>
 
