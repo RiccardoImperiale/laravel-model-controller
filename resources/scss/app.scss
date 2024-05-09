@@ -1,1 +1,73 @@
 @import '~bootstrap/scss/bootstrap';
+
+$mv-darker: #12141C;
+$mv-dark: #171923;
+$mv-accent: #FF2D20;
+$mv-lighter: #c2d0e5;
+$mv-secondary: #252A37;
+$mv-light: #455e80;
+
+body {
+    background-color: $mv-darker;
+    color: $mv-lighter;
+}
+
+h1 {
+    text-align: center;
+    padding: 3rem 0;
+    color: $mv-accent;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.movie {
+    background: linear-gradient(90deg, $mv-dark 0%, $mv-darker 100%);
+    width: calc(50% - 1rem);
+    padding: 1.5rem 1rem 1rem 3rem;
+    border-radius: 2rem;
+    border: 5px solid $mv-dark;
+
+    .top {
+
+        h2 span {
+            color: $mv-accent;
+            font-weight: 300;
+            margin-left: -1.6rem;
+        }
+
+        h5 {
+            font-weight: 300;
+
+            span {
+                color: $mv-light;
+            }
+        }
+    }
+
+    .bottom {
+        padding: .6rem 2rem .2rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        background-color: $mv-secondary;
+        border-radius: 40px;
+        margin-left: -2rem;
+        margin-top: 3rem;
+
+        span {
+            color: $mv-light;
+            font-weight: 300;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .movie {
+        width: 100%;
+    }
+}

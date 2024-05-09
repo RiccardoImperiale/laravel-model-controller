@@ -20,11 +20,15 @@
     <div class="container">
         @forelse ($movies as $movie)
             <div class="movie">
-                <h2>{{ $movie->title }}</h2>
-                <h4>{{ $movie->original_title }}</h4>
-                <h6>{{ $movie->nationality }}</h6>
-                <h6>{{ $movie->date }}</h6>
-                <h6>{{ $movie->vote }}</h6>
+                <div class="top">
+                    <h2><span>#</span> {{ $movie->title }}</h2>
+                    <h5><span>Original Name:</span> {{ $movie->original_title }}</h5>
+                </div>
+                <div class="bottom">
+                    <h6><span>Nationality: </span>{{ $movie->nationality }}</h6>
+                    <h6><span>Date: </span>{{ $movie->date }}</h6>
+                    <h6><span>Vote: </span>{{ $movie->vote }}</h6>
+                </div>
             </div>
         @empty
             <p>Sorry, no movies to be found...</p>
